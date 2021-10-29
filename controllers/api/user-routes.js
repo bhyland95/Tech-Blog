@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Comment } = require('../../models');
+const bcrypt = require('bcrypt')
 
 //returns all users
 router.get('/', (req, res) => {
@@ -84,8 +85,10 @@ router.post('/login', (req, res) => {
             res.status(400).json({ message: 'No user with username!' });
             return;
         }
+        console.log(dbUserData.password)
+        // const validPassword = dbUserData.checkPassword(req.body.password, dbUserData.password);
+        const validPassword = bcrypt.compareSync(req.body.password, dbUserData.password);
 
-        const validPassword = dbUserData.checkPassword(req.body.password);
 
         if (!validPassword) {
             res.status(400).json({ message: 'Incorrect password!' });
