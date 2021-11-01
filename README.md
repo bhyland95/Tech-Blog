@@ -1,7 +1,7 @@
 # Tech Blog
  
   ## Description
-  This application is a CMS-style blog. You are able to log in and create new blog post that will be posted to the homepage of the application. Other Users can see your post and comment on them. It was built using MYSQL, Express, Sequelize, and Handlebars. 
+  This application is a CMS-style blog. You are able to log in and create new blog posts that will be posted to the homepage of the application. Other Users can see your post and comment on them. It was built using MYSQL, Express, Sequelize, and Handlebars. 
 
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
